@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Components/Header';
 import CustomizeFeatures from './Components/CustomizeFeatures';
-import RightCart from './Components/RightCart';
-import Style from './App.css'
-import TotalCost from './Components/TotalCost';
+import './App.css'
+import CartAndTotal from './Components/CartAndTotal';
 
 
 /*
@@ -71,17 +70,9 @@ class App extends Component {
           selected = {this.state.selected}
           updateFeature={this.updateFeature}
         />
-        <section className="main__summary">
-          <h2>Your cart</h2>
-        <RightCart 
-          selected = {this.state.selected}  
+        <CartAndTotal
+          selected = {this.state.selected}
         />
-        <div className ="summary__total">
-        <TotalCost
-          selectedCart = {this.state.selected}
-        />
-        </div>
-        </section>
       </main>
     </div>
   )};
